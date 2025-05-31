@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastián Bravo - Ingeniero en Informática</title>
+    <link rel="stylesheet" href="assets/css/Estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Sebastián Bravo Veloso</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="#inspiration" class="nav-link">Mi Inspiración</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="greeting">Hola, soy</span>
+                    <span class="name">Sebastián Bravo</span>
+                    <span class="profession">
+                        <span class="dynamic-text">
+                            <!-- El contenido se insertará dinámicamente por JS -->
+                        </span>
+                    </span>
+                </h1>
+                <p class="hero-description">
+                    Aquí estamos.
+                    Un pequeño entusiasta con gusto por la Programación y la Informática. 
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="#about" class="btn btn-secondary">Conocer más</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="tech-icons">
+                        <div class="tech-icon" data-tech="React">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="tech-icon" data-tech="JavaScript">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="tech-icon" data-tech="Python">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="tech-icon" data-tech="Base de datos">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="tech-icon" data-tech="Node.js">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="tech-icon" data-tech="Git">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                    </div>
+                    <div class="card-glow"></div>
+                    <div class="floating-particles">
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="about" class="about section" id="about">
+        <div class="container">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Prácticamente desde que nací estoy con un computador, y a medida que fui creciendo, generé un gusto por la informática y la programación.
+                        Mi sueño es poder trabajar en ciberseguridad, pero de momento experimento con la programación mientras termino mi carrera. 
+                    </p>
+                    <p>
+                        Y ya hice una aplicación :D
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">Aplicaciones Desarrolladas</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Años Estudiando</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Ganas de Aprender</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-container">
+                        <div class="profile-frame">
+                            <div class="profile-photo" id="profilePhoto">
+                                <img src="assets/img/yo.JPG" alt="Sebastián Bravo" class="profile-img">
+                                <div class="profile-overlay">
+                                    <div class="profile-text">Buenas!👋</div>
+                                </div>
+                            </div>
+                            <div class="floating-elements">
+                                <div class="floating-icon code">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="floating-icon coffee">
+                                    <i class="fas fa-coffee"></i>
+                                </div>
+                                <div class="floating-icon laptop">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="floating-icon rocket">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Modal para foto expandida -->
+                <div class="photo-modal" id="photoModal">
+                    <div class="modal-backdrop" id="modalBackdrop"></div>
+                    <div class="modal-content">
+                        <div class="modal-photo-frame">
+                            <img src="assets/img/yo.JPG" alt="Sebastián Bravo" class="modal-photo-img">
+                            <div class="modal-info">
+                                <h3>Sebastián Bravo Veloso</h3>
+                                <p>Estudiante de Ingeniería en Informática</p>
+                                <div class="modal-details">
+                                    <span><i class="fas fa-code"></i> Desarrollador Entusiasta</span>
+                                    <span><i class="fas fa-book"></i> Siempre Aprendiendo</span>
+                                    <span><i class="fas fa-code-fork"></i> Amante de la Informática</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="modal-close" id="modalClose">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mi Inspiración -->
+    <section id="inspiration" class="inspiration section" id="inspiration">
+        <div class="container">
+            <h2 class="section-title">Mi Inspiración</h2>
+            <p class="section-subtitle">Mi inspiración para seguir a diario con lo que hago</p>
+            
+            <div class="inspiration-grid">
+                <!-- Mi Pareja -->
+                <div class="inspiration-card">
+                    <div class="inspiration-image">
+                        <img src="assets/img/Inspiracion/love.JPG" alt="Mi Pareja" class="inspiration-img">
+                        <div class="inspiration-overlay">
+                            <div class="inspiration-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inspiration-content">
+                        <h3>Mi Amada Lumière</h3>
+                        <p>Esta señorita es mi luz de cada dia, y además fue quien me inspiró a desarrollar mi primera aplicación.</p>
+                        <div class="inspiration-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <span>"Juntos Por Siempre"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mi Gata -->
+                <div class="inspiration-card">
+                    <div class="inspiration-image">
+                        <img src="assets/img/Inspiracion/gata.JPG" alt="Mi Gata" class="inspiration-img">
+                        <div class="inspiration-overlay">
+                            <div class="inspiration-icon">
+                                <i class="fas fa-paw"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inspiration-content">
+                        <h3>Mi Querida Yuumi</h3>
+                        <p>Mi gata gorda, lamentablemente el nombre viene del lol, y fue el único nombre que a mi madre le gusto. No sé que haría sin mi gata</p>
+                        <div class="inspiration-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <span>"Mi Gata Watona"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="projects" class="projects section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/Proyectos/proyecto1.png" alt="Organizador Universitario de la Diatomea" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://www.diatomeauniversitaria.studio" class="project-link disabled" title="Diatomea Universitaria"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/sebravo80/organizador-universitario" class="project-link disabled" title="Código en desarrollo"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Organizador Universitario de la Diatomea</h3>
+                        <p class="project-description">
+                            La idea de esta aplicación nació porque mi novia quería un excel para organizar sus cosas de la universidad,
+                            pero un excel es algo muy "rudimentario", por lo que decidí aprender a programar mejor y hacerle una aplicación web.
+                            Así que esto es por ella ❤️.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/Proyectos/portfolio.png" alt="Portfolio Personal" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/sebravo80" class="project-link disabled" title="Código en desarrollo"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio Personal</h3>
+                        <p class="project-description">
+                            Bueno este sería mi portfolio, aquí quiero ir añadiendo los proyectos que desarrolle en un futuro.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="skills" class="skills section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Mi Experiencia</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Express</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Herramientas</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>Terminal</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer sin sección de contacto y sin newsletter -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Marca y redes sociales -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">SB</div>
+                        <span class="logo-text">Sebastián Bravo</span>
+                    </div>
+                    <p class="footer-description">
+                        Estudiante de segundo año de Ingeniería en Informática.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://github.com/sebravo80" class="social-link" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:sebastian.25.bravoo@gmail.com" class="social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://instagram.com/_seba_bravo_" class="social-link" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Enlaces rápidos -->
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <div class="footer-links">
+                        <a href="#home" class="footer-link">Inicio</a>
+                        <a href="#about" class="footer-link">Sobre mí</a>
+                        <a href="#inspiration" class="footer-link">Mi Inspiración</a>
+                        <a href="#projects" class="footer-link">Proyectos</a>
+                        <a href="#skills" class="footer-link">Habilidades</a>
+                    </div>
+                </div>
+
+                <!-- Información de contacto -->
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:sebastian.25.bravoo@gmail.com">sebastian.25.bravoo@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+56 9 56291545</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Los Ángeles, Chile</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Estudiante de Ingeniería en Informática, INACAP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tecnologías -->
+                <div class="footer-section">
+                    <h4>Tecnologías</h4>
+                    <div class="footer-tech-grid">
+                        <div class="tech-badge">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sebastián Bravo Veloso. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
