@@ -3,6 +3,94 @@ window.addEventListener('load', function() {
     void document.body.offsetHeight;
 });
 
+// Función de inicialización mejorada
+let isInitialized = false;
+let animationsReady = false;
+
+// Función para asegurar que todo esté listo
+function ensureFullyLoaded() {
+    return new Promise((resolve) => {
+        if (document.readyState === 'complete') {
+            setTimeout(resolve, 100);
+        } else {
+            window.addEventListener('load', () => {
+                setTimeout(resolve, 100);
+            });
+        }
+    });
+}
+
+// Función para inicializar animaciones de forma segura
+async function initAnimationsSafely() {
+    if (animationsReady) return;
+    
+    await ensureFullyLoaded();
+    
+    // Forzar reflow antes de aplicar animaciones
+    document.body.offsetHeight;
+    
+    // Aplicar clases de animación de forma secuencial
+    const animatedElements = document.querySelectorAll('.project-card, .skill-category, .inspiration-card');
+    animatedElements.forEach((el, index) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        
+        setTimeout(() => {
+            el.style.transition = 'all 0.6s ease-out';
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        }, index * 100);
+    });
+    
+    animationsReady = true;
+}
+
+// Función de inicialización principal mejorada
+async function initializeApp() {
+    if (isInitialized) return;
+    
+    try {
+        await ensureFullyLoaded();
+        
+        // Inicializar componentes en orden específico
+        initNavigation();
+        await new Promise(resolve => setTimeout(resolve, 50));
+        
+        initTypewriterEffect();
+        await new Promise(resolve => setTimeout(resolve, 50));
+        
+        initModalTriggers();
+        await new Promise(resolve => setTimeout(resolve, 50));
+        
+        initHoverEffects();
+        await new Promise(resolve => setTimeout(resolve, 50));
+        
+        initIntersectionObservers();
+        await new Promise(resolve => setTimeout(resolve, 50));
+        
+        initGlobalEventListeners();
+        await new Promise(resolve => setTimeout(resolve, 50));
+        
+        initParticles();
+        await new Promise(resolve => setTimeout(resolve, 100));
+        
+        // Inicializar animaciones al final
+        await initAnimationsSafely();
+        
+        // Marcar como completado
+        document.body.classList.add('app-initialized');
+        isInitialized = true;
+        
+    } catch (error) {
+        console.warn('Error en inicialización:', error);
+        // Reintentar después de un tiempo
+        setTimeout(() => {
+            isInitialized = false;
+            initializeApp();
+        }, 1000);
+    }
+}
+
 // Función principal de inicialización
 document.addEventListener('DOMContentLoaded', function() {
     // Mi setup inicial
@@ -25,7 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (heroVisual) heroVisual.style.opacity = '1';
 });
 
-// Se simplifica la función initModals para evitar conflictos
 function initModalTriggers() {
     const profilePhoto = document.getElementById('profilePhoto');
     const photoModal = document.getElementById('photoModal');
@@ -271,26 +358,36 @@ function initHoverEffects() {
     });
 }
 
+// Observer mejorado para animaciones
 function initIntersectionObservers() {
-    // Animación de aparición de elementos al hacer scroll
     const observerOptions = {
-        threshold: 0.1,
+        threshold: 0.15,
         rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                // Delay para evitar conflictos
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('animation-complete');
+                }, 100);
+                
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observar elementos que necesitan animación
-    document.querySelectorAll('.project-card, .skill-category, .inspiration-card').forEach(el => {
-        observer.observe(el);
-    });
+    // Observar elementos solo cuando estén listos
+    setTimeout(() => {
+        document.querySelectorAll('.project-card, .skill-category, .inspiration-card').forEach(el => {
+            if (!el.classList.contains('animation-complete')) {
+                observer.observe(el);
+            }
+        });
+    }, 500);
 }
 
 function initGlobalEventListeners() {
@@ -409,8 +506,14 @@ function initParticles() {
     window.addEventListener('resize', function() {
         const isMobileNow = window.innerWidth <= 768;
         if ((isMobile && !isMobileNow) || (!isMobile && isMobileNow)) {
-            // Solo recalcular si cambia entre móvil y escritorio
             initParticles();
         }
     });
 }
+
+// Exponer función para debugging
+window.debugPortfolio = {
+    reinitialize: forceReinitialize,
+    isInitialized: () => isInitialized,
+    animationsReady: () => animationsReady
+};
