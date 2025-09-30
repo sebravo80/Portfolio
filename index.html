@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Sebastián Bravo, estudiante de Ingeniería en Informática enfocado en desarrollo web, automatización y ciberseguridad.">
+    <meta name="theme-color" content="#1e40af">
+    <meta property="og:title" content="Sebastián Bravo - Ingeniero en Informática">
+    <meta property="og:description" content="Conoce mis proyectos, habilidades y motivaciones como desarrollador entusiasta.">
+    <meta property="og:image" content="assets/img/Proyectos/portfolio.png">
+    <meta property="og:type" content="website">
     <title>Sebastián Bravo - Ingeniero en Informática</title>
     <link rel="stylesheet" href="assets/css/Estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,23 +26,24 @@
             <div class="nav-logo">
                 <span class="logo-text">Sebastián Alejandro Bravo Veloso</span>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="primary-navigation" aria-label="Secciones principales">
                 <li><a href="#home" class="nav-link">Inicio</a></li>
                 <li><a href="#about" class="nav-link">Sobre mí</a></li>
-                <li><a href="#inspiration" class="nav-link">Mi Inspiración</a></li>
+                <li><a href="#inspiration" class="nav-link">Inspiración</a></li>
                 <li><a href="#projects" class="nav-link">Proyectos</a></li>
-                <li><a href="#skills" class="nav-link">Mi Experiencia</a></li>
+                <li><a href="#skills" class="nav-link">Experiencia</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
             </ul>
-            <div class="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section id="home" class="hero" id="hero">
+    <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
@@ -47,12 +54,16 @@
                     </span>
                 </h1>
                 <p class="hero-description">
-                    Aquí estamos.
-                    Un pequeño entusiasta con gusto por la Programación y la Informática. 
+                    Desarrollador en formación con foco en crear experiencias web accesibles, robustas y agradables. Me muevo entre el frontend y el backend mientras cultivo un profundo interés por la ciberseguridad.
                 </p>
+                <ul class="hero-highlights" aria-label="Áreas clave">
+                    <li>Diseño de interfaces modernas y responsivas</li>
+                    <li>Automatización de tareas con JavaScript y Python</li>
+                    <li>Buenas prácticas de código y trabajo colaborativo</li>
+                </ul>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
-                    <a href="#about" class="btn btn-secondary">Conocer más</a>
+                    <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+                    <a href="#contact" class="btn btn-secondary">Charlemos</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -94,18 +105,23 @@
     </section>
 
     <!-- Sobre mí -->
-    <section id="about" class="about section" id="about">
+    <section id="about" class="about section">
         <div class="container">
             <h2 class="section-title">Sobre mí</h2>
+            <p class="section-subtitle">Me encanta entender cómo funcionan las cosas, convertir ideas en productos reales y compartir lo que aprendo en el camino.</p>
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        Prácticamente desde que nací estoy con un computador, y a medida que fui creciendo, generé un gusto por la informática y la programación.
-                        Mi sueño es poder trabajar en ciberseguridad, pero de momento experimento con la programación mientras termino mi carrera. 
+                        Desde pequeño la tecnología fue mi lenguaje favorito. Hoy curso el segundo año de Ingeniería en Informática y dedico mi tiempo a explorar el desarrollo web, la automatización y los fundamentos de la ciberseguridad.
                     </p>
                     <p>
-                        Y ya hice una aplicación :D
+                        Me motiva crear herramientas que resuelvan problemas reales: desde aplicaciones para organizar la universidad hasta sitios pensados para contar historias y conectar con personas.
                     </p>
+                    <ul class="about-highlights">
+                        <li>Actualmente fortaleciéndome en JavaScript moderno, React y Node.js.</li>
+                        <li>Practicando flujos de trabajo con Git, testing desde el inicio y CI/CD básico.</li>
+                        <li>Aprendiendo fundamentos de ciberseguridad y cómo proteger aplicaciones web.</li>
+                    </ul>
                     <div class="stats">
                         <div class="stat">
                             <span class="stat-number">1</span>
@@ -125,7 +141,7 @@
                     <div class="profile-container">
                         <div class="profile-frame">
                             <div class="profile-photo" id="profilePhoto">
-                                <img src="assets/img/yo.JPG" alt="Sebastián Bravo" class="profile-img">
+                                <img src="assets/img/yo.JPG" alt="Sebastián Bravo" class="profile-img" loading="lazy">
                                 <div class="profile-overlay">
                                     <div class="profile-text">Buenas!👋</div>
                                 </div>
@@ -154,7 +170,7 @@
                     <div class="modal-backdrop" id="modalBackdrop"></div>
                     <div class="modal-content">
                         <div class="modal-photo-frame">
-                            <img src="assets/img/yo.JPG" alt="Sebastián Bravo" class="modal-photo-img">
+                            <img src="assets/img/yo.JPG" alt="Sebastián Bravo" class="modal-photo-img" loading="lazy">
                             <div class="modal-info">
                                 <h3>Sebastián Bravo Veloso</h3>
                                 <p>Estudiante de Ingeniería en Informática</p>
@@ -175,7 +191,7 @@
     </section>
 
     <!-- Mi Inspiración -->
-    <section id="inspiration" class="inspiration section" id="inspiration">
+    <section id="inspiration" class="inspiration section">
         <div class="container">
             <h2 class="section-title">Mi Inspiración</h2>
             <p class="section-subtitle">Mi inspiración para seguir a diario con lo que hago</p>
@@ -184,7 +200,7 @@
                 <!-- Mi Pareja -->
                 <div class="inspiration-card">
                     <div class="inspiration-image">
-                        <img src="assets/img/Inspiracion/love.JPG" alt="Mi Pareja" class="inspiration-img">
+                        <img src="assets/img/Inspiracion/love.JPG" alt="Mi pareja" class="inspiration-img" loading="lazy">
                         <div class="inspiration-overlay">
                             <div class="inspiration-icon">
                                 <i class="fas fa-heart"></i>
@@ -204,7 +220,7 @@
                 <!-- Mi Gata -->
                 <div class="inspiration-card">
                     <div class="inspiration-image">
-                        <img src="assets/img/Inspiracion/gata.JPG" alt="Mi Gata" class="inspiration-img">
+                        <img src="assets/img/Inspiracion/gata.JPG" alt="Mi gata" class="inspiration-img" loading="lazy">
                         <div class="inspiration-overlay">
                             <div class="inspiration-icon">
                                 <i class="fas fa-paw"></i>
@@ -225,18 +241,18 @@
     </section>
 
     <!-- Proyectos -->
-    <section id="projects" class="projects section" id="projects">
+    <section id="projects" class="projects section">
         <div class="container">
             <h2 class="section-title">Mis Proyectos</h2>
             <div class="projects-grid">
                 <!-- Proyecto 1 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/img/Proyectos/proyecto1.png" alt="Organizador Universitario de la Diatomea" class="project-img">
+                        <img src="assets/img/Proyectos/proyecto1.png" alt="Organizador Universitario de la Diatomea" class="project-img" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://www.diatomeauniversitaria.studio" class="project-link disabled" title="Diatomea Universitaria"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="https://github.com/sebravo80/organizador-universitario" class="project-link disabled" title="Código en desarrollo"><i class="fab fa-github"></i></a>
+                                    <a href="https://www.diatomeauniversitaria.studio" class="project-link" title="Diatomea Universitaria" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://github.com/sebravo80/organizador-universitario" class="project-link" title="Código en GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -259,10 +275,10 @@
                 <!-- Proyecto 2 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/img/Proyectos/portfolio.png" alt="Portfolio Personal" class="project-img">
+                        <img src="assets/img/Proyectos/portfolio.png" alt="Portfolio personal" class="project-img" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/sebravo80" class="project-link disabled" title="Código en desarrollo"><i class="fab fa-github"></i></a>
+                                    <a href="https://github.com/sebravo80" class="project-link" title="Repositorio en GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -283,7 +299,7 @@
     </section>
 
     <!-- Experiencia -->
-    <section id="skills" class="skills section" id="skills">
+    <section id="skills" class="skills section">
         <div class="container">
             <h2 class="section-title">Mi Experiencia</h2>
             <div class="skills-grid">
@@ -356,6 +372,67 @@
         </div>
     </section>
 
+    <!-- Contacto -->
+    <section id="contact" class="contact section" aria-labelledby="contact-title">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-intro">
+                    <h2 class="section-title" id="contact-title">Construyamos algo juntos</h2>
+                    <p class="section-subtitle">Si quieres colaborar, tienes una idea o simplemente deseas conversar, ¡escríbeme! Responderé tan pronto como pueda.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-location-dot" aria-hidden="true"></i>
+                            <div>
+                                <span class="contact-label">Ubicación</span>
+                                <span>Los Ángeles, Chile (disponible remoto)</span>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+                            <div>
+                                <span class="contact-label">Correo</span>
+                                <a href="mailto:sebastian.25.bravoo@gmail.com">sebastian.25.bravoo@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-comments" aria-hidden="true"></i>
+                            <div>
+                                <span class="contact-label">Preferencias</span>
+                                <span>Frontend, automatización, primeros pasos en ciberseguridad</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" placeholder="¿Cómo te llamas?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="nombre@empresa.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="topic">Motivo</label>
+                        <select id="topic" name="topic" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="colaboracion">Colaboración o proyecto</option>
+                            <option value="mentoria">Mentoría o guía</option>
+                            <option value="pregunta">Preguntas generales</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Cuéntame sobre la idea o proyecto" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                    <p class="form-feedback" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer  -->
     <footer class="footer" id="footer">
         <div class="container">
@@ -370,13 +447,13 @@
                         Estudiante de segundo año de Ingeniería en Informática.
                     </p>
                     <div class="footer-social">
-                        <a href="https://github.com/sebravo80" class="social-link" target="_blank" title="GitHub">
+                        <a href="https://github.com/sebravo80" class="social-link" target="_blank" rel="noopener noreferrer" title="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
                         <a href="mailto:sebastian.25.bravoo@gmail.com" class="social-link" title="Email">
                             <i class="fas fa-envelope"></i>
                         </a>
-                        <a href="https://instagram.com/_seba_bravo_" class="social-link" target="_blank" title="Instagram">
+                        <a href="https://instagram.com/_seba_bravo_" class="social-link" target="_blank" rel="noopener noreferrer" title="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -391,6 +468,7 @@
                         <a href="#inspiration" class="footer-link">Mi Inspiración</a>
                         <a href="#projects" class="footer-link">Proyectos</a>
                         <a href="#skills" class="footer-link">Mi Experiencia</a>
+                        <a href="#contact" class="footer-link">Contacto</a>
                     </div>
                 </div>
 

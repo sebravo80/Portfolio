@@ -2,101 +2,13 @@ window.addEventListener('load', function() {
     document.body.classList.add('render-complete');
     void document.body.offsetHeight;
 });
-
-// Función de inicialización mejorada
-let isInitialized = false;
-let animationsReady = false;
-
-// Función para asegurar que todo esté listo
-function ensureFullyLoaded() {
-    return new Promise((resolve) => {
-        if (document.readyState === 'complete') {
-            setTimeout(resolve, 100);
-        } else {
-            window.addEventListener('load', () => {
-                setTimeout(resolve, 100);
-            });
-        }
-    });
-}
-
-// Función para inicializar animaciones de forma segura
-async function initAnimationsSafely() {
-    if (animationsReady) return;
-    
-    await ensureFullyLoaded();
-    
-    // Forzar reflow antes de aplicar animaciones
-    document.body.offsetHeight;
-    
-    // Aplicar clases de animación de forma secuencial
-    const animatedElements = document.querySelectorAll('.project-card, .skill-category, .inspiration-card');
-    animatedElements.forEach((el, index) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        
-        setTimeout(() => {
-            el.style.transition = 'all 0.6s ease-out';
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-        }, index * 100);
-    });
-    
-    animationsReady = true;
-}
-
-// Función de inicialización principal mejorada
-async function initializeApp() {
-    if (isInitialized) return;
-    
-    try {
-        await ensureFullyLoaded();
-        
-        // Inicializar componentes en orden específico
-        initNavigation();
-        await new Promise(resolve => setTimeout(resolve, 50));
-        
-        initTypewriterEffect();
-        await new Promise(resolve => setTimeout(resolve, 50));
-        
-        initModalTriggers();
-        await new Promise(resolve => setTimeout(resolve, 50));
-        
-        initHoverEffects();
-        await new Promise(resolve => setTimeout(resolve, 50));
-        
-        initIntersectionObservers();
-        await new Promise(resolve => setTimeout(resolve, 50));
-        
-        initGlobalEventListeners();
-        await new Promise(resolve => setTimeout(resolve, 50));
-        
-        initParticles();
-        await new Promise(resolve => setTimeout(resolve, 100));
-        
-        // Inicializar animaciones al final
-        await initAnimationsSafely();
-        
-        // Marcar como completado
-        document.body.classList.add('app-initialized');
-        isInitialized = true;
-        
-    } catch (error) {
-        console.warn('Error en inicialización:', error);
-        // Reintentar después de un tiempo
-        setTimeout(() => {
-            isInitialized = false;
-            initializeApp();
-        }, 1000);
-    }
-}
-
 // Función principal de inicialización
 document.addEventListener('DOMContentLoaded', function() {
     // Mi setup inicial
     initNavigation();
     initTypewriterEffect();
     initModalTriggers();
+    initContactForm();
     initAnimations();
     initHoverEffects();
     initIntersectionObservers();
@@ -145,28 +57,77 @@ function initModalTriggers() {
     }
 }
 
+function initContactForm() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    const feedback = form.querySelector('.form-feedback');
+    const fields = Array.from(form.querySelectorAll('input, select, textarea'));
+
+    const showFeedback = (message, type) => {
+        if (!feedback) return;
+        feedback.textContent = message;
+        feedback.classList.toggle('success', type === 'success');
+        feedback.classList.toggle('error', type === 'error');
+    };
+
+    fields.forEach(field => {
+        field.addEventListener('input', () => {
+            if (field.checkValidity()) {
+                field.classList.remove('invalid');
+            }
+        });
+    });
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        let isValid = true;
+        fields.forEach(field => {
+            if (!field.checkValidity()) {
+                field.classList.add('invalid');
+                isValid = false;
+            } else {
+                field.classList.remove('invalid');
+            }
+        });
+
+        if (!isValid) {
+            showFeedback('Revisa los campos marcados e intenta nuevamente.', 'error');
+            return;
+        }
+
+        showFeedback('¡Mensaje enviado! Te responderé pronto.', 'success');
+        form.reset();
+        fields.forEach(field => field.classList.remove('invalid'));
+        setTimeout(() => showFeedback('', ''), 4500);
+    });
+}
+
 // Funciones individuales para cada componente
 function initNavigation() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
     if (navToggle && navMenu) {
+        const setMenuState = (isOpen) => {
+            navMenu.classList.toggle('active', isOpen);
+            navToggle.classList.toggle('active', isOpen);
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+        };
+
         navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+            const willOpen = !navMenu.classList.contains('active');
+            setMenuState(willOpen);
         });
 
         document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            });
+            link.addEventListener('click', () => setMenuState(false));
         });
 
         document.addEventListener('click', (e) => {
             if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
+                setMenuState(false);
             }
         });
     }
@@ -192,11 +153,11 @@ function initTypewriterEffect() {
     
     // Mis frases para la animación de escritura
     const texts = [
-        'Ing. en Informática en Proceso',
-        'Desarrollador en Proceso',
-        'Programador en Proceso',
-        'Un vio',
-        'El Papá del Johan'
+        'Estudiante de Ingeniería en Informática',
+        'Desarrollador frontend en formación',
+        'Entusiasta de la ciberseguridad',
+        'Amante del aprendizaje continuo',
+        'Colaborador con mentalidad de producto'
     ];
     
     let textIndex = 0;
@@ -276,33 +237,6 @@ function initAnimations() {
         }, { threshold: 0.5 });
         
         aboutObserver.observe(aboutSection);
-    }
-}
-
-function initModals() {
-    const profilePhoto = document.getElementById('profilePhoto');
-    const photoModal = document.getElementById('photoModal');
-    const modalBackdrop = document.getElementById('modalBackdrop');
-    const modalClose = document.getElementById('modalClose');
-
-    if (profilePhoto && photoModal && modalBackdrop && modalClose) {
-        profilePhoto.addEventListener('click', () => {
-            photoModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-
-        modalBackdrop.addEventListener('click', closeModal);
-        modalClose.addEventListener('click', closeModal);
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && photoModal.classList.contains('active')) {
-                closeModal();
-            }
-        });
-
-        function closeModal() {
-            photoModal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
     }
 }
 
@@ -391,9 +325,11 @@ function initIntersectionObservers() {
 }
 
 function initGlobalEventListeners() {
-    // Navbar transparente al hacer scroll
-    window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('.navbar');
+    const navbar = document.querySelector('.navbar');
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+
+    const handleScroll = () => {
         if (navbar) {
             if (window.scrollY > 50) {
                 navbar.style.background = 'rgba(15, 23, 42, 0.98)';
@@ -403,7 +339,28 @@ function initGlobalEventListeners() {
                 navbar.style.boxShadow = 'none';
             }
         }
-        
+
+        if (sections.length && navLinks.length) {
+            const scrollPosition = window.scrollY + 180;
+            let activeSectionId = null;
+
+            for (const section of sections) {
+                const top = section.offsetTop;
+                const bottom = top + section.offsetHeight;
+                if (scrollPosition >= top && scrollPosition < bottom) {
+                    activeSectionId = section.id;
+                    break;
+                }
+            }
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (!href || !href.startsWith('#')) return;
+                const targetId = href.substring(1);
+                link.classList.toggle('active', targetId === activeSectionId);
+            });
+        }
+
         // Efecto parallax en hero
         const scrolled = window.pageYOffset;
         const hero = document.querySelector('.hero');
@@ -412,7 +369,11 @@ function initGlobalEventListeners() {
         if (hero && heroContent && scrolled < hero.offsetHeight) {
             heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
         }
-    });
+    };
+
+    // Navbar transparente al hacer scroll
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
     
     // Función para manejar el resize de la ventana
     window.addEventListener('resize', () => {
@@ -484,13 +445,14 @@ function createParticles(containerId, numberOfParticles = 5) {
 
 function initParticles() {
     // Determinar la cantidad de partículas según el ancho de pantalla
-    const isMobile = window.innerWidth <= 768;
+    let isMobile = window.innerWidth <= 768;
     const particleCount = {
         hero: isMobile ? 4 : 8,
         about: isMobile ? 3 : 5,
         inspiration: isMobile ? 3 : 6,
         projects: isMobile ? 3 : 6,
         skills: isMobile ? 2 : 5,
+        contact: isMobile ? 2 : 5,
         footer: isMobile ? 3 : 7
     };
     
@@ -500,6 +462,7 @@ function initParticles() {
     createParticles('inspiration', particleCount.inspiration);
     createParticles('projects', particleCount.projects);
     createParticles('skills', particleCount.skills);
+    createParticles('contact', particleCount.contact);
     createParticles('footer', particleCount.footer);
     
     // Re-crear partículas al cambiar el tamaño de la ventana
@@ -507,13 +470,8 @@ function initParticles() {
         const isMobileNow = window.innerWidth <= 768;
         if ((isMobile && !isMobileNow) || (!isMobile && isMobileNow)) {
             initParticles();
+            isMobile = isMobileNow;
         }
     });
 }
 
-// Exponer función para debugging
-window.debugPortfolio = {
-    reinitialize: forceReinitialize,
-    isInitialized: () => isInitialized,
-    animationsReady: () => animationsReady
-};
