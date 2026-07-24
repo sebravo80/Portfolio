@@ -1,0 +1,87 @@
+Copyright (c) 2026 Sebastián Alejandro Bravo Veloso
+
+================================================================================
+ES — ALCANCE DE ESTA LICENCIA
+================================================================================
+
+Este repositorio contiene dos cosas distintas, con condiciones distintas:
+
+1. EL CÓDIGO (HTML, CSS, JavaScript, scripts de build y configuración) se
+   publica bajo la Licencia MIT, cuyo texto íntegro aparece más abajo.
+   Puedes usarlo, estudiarlo, modificarlo y reutilizarlo, incluso
+   comercialmente, conservando el aviso de copyright.
+
+2. EL CONTENIDO NO está cubierto por la Licencia MIT. Todos los derechos
+   reservados. Esto incluye, sin limitarse a:
+
+   - Los textos del sitio en español e inglés (incluido el archivo content.js).
+   - Las fotografías y demás imágenes de assets/img/, y las personas que
+     aparecen en ellas.
+   - El isotipo del Organizador Universitario de la Diatomea.
+   - La dirección de arte y el sistema de diseño documentado en los archivos
+     DESIGN.md: paletas, elecciones tipográficas, composición y motivos
+     gráficos, tomados en su conjunto como obra.
+   - El nombre "Sebastián Bravo" y su identidad personal y profesional.
+
+   No se permite reproducir, publicar, distribuir ni crear obras derivadas de
+   este contenido sin permiso escrito y previo del titular.
+
+En términos simples: aprende del código y reutilízalo cuanto quieras; no
+republiques este portafolio como si fuera tuyo.
+
+Para pedir permiso: sebastian.25.bravoo@gmail.com
+
+================================================================================
+EN — SCOPE OF THIS LICENSE
+================================================================================
+
+This repository contains two distinct things, under distinct terms:
+
+1. THE CODE (HTML, CSS, JavaScript, build and configuration scripts) is
+   released under the MIT License, reproduced in full below. You may use,
+   study, modify and reuse it, including commercially, provided the copyright
+   notice is retained.
+
+2. THE CONTENT is NOT covered by the MIT License. All rights reserved. This
+   includes, without limitation:
+
+   - The Spanish and English copy of the site (including the file content.js).
+   - The photographs and other images in assets/img/, and the people depicted
+     in them.
+   - The Organizador Universitario de la Diatomea logo.
+   - The art direction and design system documented in the DESIGN.md files:
+     palettes, typographic choices, composition and graphic motifs, taken
+     together as a work.
+   - The name "Sebastián Bravo" and his personal and professional identity.
+
+   This content may not be reproduced, published, distributed, or used to
+   create derivative works without the prior written permission of the holder.
+
+In plain terms: learn from the code and reuse as much of it as you like; do not
+republish this portfolio as your own.
+
+Permission requests: sebastian.25.bravoo@gmail.com
+
+================================================================================
+MIT LICENSE — APPLIES TO THE CODE ONLY / SE APLICA SOLO AL CÓDIGO
+================================================================================
+
+Copyright (c) 2026 Sebastián Alejandro Bravo Veloso
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

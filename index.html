@@ -1,539 +1,194 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Sebastián Bravo, estudiante de Ingeniería en Informática enfocado en desarrollo web, automatización y ciberseguridad.">
-    <meta name="theme-color" content="#1e40af">
-    <meta property="og:title" content="Sebastián Bravo - Ingeniero en Informática">
-    <meta property="og:description" content="Conoce mis proyectos, habilidades y motivaciones como desarrollador entusiasta.">
-    <meta property="og:image" content="assets/img/Proyectos/portfolio.png">
-    <meta property="og:type" content="website">
-    <title>Sebastián Bravo - Ingeniero en Informática</title>
-    <link rel="stylesheet" href="assets/css/Estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sebastián Bravo — Ingeniería en Informática</title>
+  <meta name="description" content="Portafolio de Sebastián Bravo, estudiante de Ingeniería en Informática (INACAP, Los Ángeles). Desarrollo web, automatización y primeros pasos en ciberseguridad.">
+  <meta name="theme-color" content="#ECEFEA">
+  <meta name="color-scheme" content="light">
+
+  <!-- Autoría -->
+  <meta name="author" content="Sebastián Alejandro Bravo Veloso">
+  <meta name="copyright" content="© 2026 Sebastián Alejandro Bravo Veloso. Código bajo licencia MIT; contenido con todos los derechos reservados. Ver /LICENSE.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sebastián Bravo — Ingeniería en Informática">
+  <meta property="og:description" content="Construyo herramientas web que ponen orden donde no lo hay.">
+  <meta property="og:url" content="https://sebravo80.github.io/Portfolio/">
+  <meta property="og:image" content="https://sebravo80.github.io/Portfolio/assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://sebravo80.github.io/Portfolio/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sebastián Alejandro Bravo Veloso",
+    "alternateName": "Sebastián Bravo",
+    "jobTitle": "Estudiante de Ingeniería en Informática",
+    "url": "https://sebravo80.github.io/Portfolio/",
+    "email": "sebastian.25.bravoo@gmail.com",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "INACAP, Los Ángeles" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Los Ángeles", "addressCountry": "CL" },
+    "knowsAbout": ["Desarrollo web", "JavaScript", "React", "Node.js", "Python", "Ciberseguridad web"],
+    "sameAs": ["https://github.com/sebravo80", "https://instagram.com/_seba_bravo_"]
+  }
+  </script>
 </head>
 <body>
-    <!-- Navegación -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">Sebastián Alejandro Bravo Veloso</span>
-            </div>
-            <ul class="nav-menu" id="primary-navigation" aria-label="Secciones principales">
-                <li><a href="#home" class="nav-link">Inicio</a></li>
-                <li><a href="#about" class="nav-link">Sobre mí</a></li>
-                <li><a href="#inspiration" class="nav-link">Inspiración</a></li>
-                <li><a href="#projects" class="nav-link">Proyectos</a></li>
-                <li><a href="#skills" class="nav-link">Experiencia</a></li>
-                <li><a href="#contact" class="nav-link">Contacto</a></li>
-            </ul>
-            <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-controls="primary-navigation" aria-expanded="false">
-                <span class="bar" aria-hidden="true"></span>
-                <span class="bar" aria-hidden="true"></span>
-                <span class="bar" aria-hidden="true"></span>
-            </button>
-        </div>
-    </nav>
+  <!--
+    © 2026 Sebastián Alejandro Bravo Veloso — sebravo80
+    Código: MIT · Contenido, fotografías y dirección de arte: todos los derechos reservados.
+    Ver el archivo LICENSE del repositorio.
+    Marca de origen: sbv-bitacora-7c41e9d2
+  -->
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-    <!-- Hero -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="greeting">Hola, soy</span>
-                    <span class="name">Sebastián Bravo</span>
-                    <span class="profession">
-                        <span class="dynamic-text"></span>
-                    </span>
-                </h1>
-                <p class="hero-description">
-                    Desarrollador en formación con foco en crear experiencias web accesibles, robustas y agradables. Me muevo entre el frontend y el backend mientras cultivo un profundo interés por la ciberseguridad.
-                </p>
-                <ul class="hero-highlights" aria-label="Áreas clave">
-                    <li>Diseño de interfaces modernas y responsivas</li>
-                    <li>Automatización de tareas con JavaScript y Python</li>
-                    <li>Buenas prácticas de código y trabajo colaborativo</li>
-                </ul>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Ver proyectos</a>
-                    <a href="#contact" class="btn btn-secondary">Charlemos</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-card">
-                    <div class="tech-icons">
-                        <div class="tech-icon" data-tech="React">
-                            <i class="fab fa-react"></i>
-                        </div>
-                        <div class="tech-icon" data-tech="JavaScript">
-                            <i class="fab fa-js-square"></i>
-                        </div>
-                        <div class="tech-icon" data-tech="Python">
-                            <i class="fab fa-python"></i>
-                        </div>
-                        <div class="tech-icon" data-tech="Base de datos">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="tech-icon" data-tech="Node.js">
-                            <i class="fab fa-node-js"></i>
-                        </div>
-                        <div class="tech-icon" data-tech="Git">
-                            <i class="fab fa-git-alt"></i>
-                        </div>
-                    </div>
-                    <div class="card-glow"></div>
-                    <div class="floating-particles">
-                        <div class="particle"></div>
-                        <div class="particle"></div>
-                        <div class="particle"></div>
-                        <div class="particle"></div>
-                        <div class="particle"></div>
-                    </div>
-                </div>
-            </div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#intro">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="24" height="24"><g fill="none" stroke="currentColor" stroke-width="1.1"><circle cx="16" cy="16" r="10.5"/><circle cx="16" cy="16" r="6.5" opacity=".55"/><circle cx="16" cy="16" r="2" fill="currentColor" stroke="none"/></g></svg>
+        </span>
+        <span class="brand-name">Sebastián Bravo</span>
+        <span class="brand-ver" id="verBadge">v0.4</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Secciones">
+        <ul id="nav-list"></ul>
+      </nav>
+
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch to English" title="English">EN</button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Portada de la bitácora -->
+    <section id="intro" class="hero" aria-labelledby="hero-title">
+      <div class="wrap entry-grid">
+        <div class="spine" aria-hidden="true"><span class="spine-no">00</span></div>
+        <div class="entry-main hero-grid">
+        <div class="hero-text">
+          <p class="logline"><span class="lg-key">REG.</span> <span id="logYear">2026</span> · <span class="lg-ver" id="logVer">v0.4</span><span class="caret" aria-hidden="true"></span></p>
+          <h1 id="hero-title" class="hero-title" data-i18n="hero.headline">Construyo herramientas web que ponen orden donde no lo hay.</h1>
+          <p class="hero-sub" data-i18n="hero.sub">Frontend y backend, con un pie en la ciberseguridad. Aprendo construyendo cosas que funcionan de verdad.</p>
+          <p class="hero-kicker" data-i18n="hero.kicker">Ingeniería en Informática · Tercer año · INACAP Los Ángeles</p>
+          <p class="hero-name">Sebastián Bravo Veloso</p>
+          <p class="kbd-hint" id="kbdHint"></p>
         </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
+        <div class="hero-plate" aria-hidden="true">
+          <svg id="diatom" viewBox="0 0 400 400" class="diatom"></svg>
         </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Sobre mí -->
-    <section id="about" class="about section">
-        <div class="container">
-            <h2 class="section-title">Sobre mí</h2>
-            <p class="section-subtitle">Me encanta entender cómo funcionan las cosas, convertir ideas en productos reales y compartir lo que aprendo en el camino.</p>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Desde pequeño la tecnología fue mi lenguaje favorito. Hoy curso el segundo año de Ingeniería en Informática y dedico mi tiempo a explorar el desarrollo web, la automatización y los fundamentos de la ciberseguridad.
-                    </p>
-                    <p>
-                        Me motiva crear herramientas que resuelvan problemas reales: desde aplicaciones para organizar la universidad hasta sitios pensados para contar historias y conectar con personas.
-                    </p>
-                    <ul class="about-highlights">
-                        <li>Actualmente fortaleciéndome en JavaScript moderno, React y Node.js.</li>
-                        <li>Practicando flujos de trabajo con Git, testing desde el inicio y CI/CD básico.</li>
-                        <li>Aprendiendo fundamentos de ciberseguridad y cómo proteger aplicaciones web.</li>
-                    </ul>
-                    <div class="stats">
-                        <div class="stat">
-                            <span class="stat-number">1</span>
-                            <span class="stat-label">Aplicaciones Desarrolladas</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">2</span>
-                            <span class="stat-label">Años Estudiando</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">∞</span>
-                            <span class="stat-label">Ganas de Aprender</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="profile-container">
-                        <div class="profile-frame">
-                            <div class="profile-photo" id="profilePhoto">
-                                <img src="assets/img/yo.JPG" alt="Sebastián Bravo" class="profile-img" loading="lazy">
-                                <div class="profile-overlay">
-                                    <div class="profile-text">Buenas!👋</div>
-                                </div>
-                            </div>
-                            <div class="floating-elements">
-                                <div class="floating-icon code">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <div class="floating-icon coffee">
-                                    <i class="fas fa-coffee"></i>
-                                </div>
-                                <div class="floating-icon laptop">
-                                    <i class="fas fa-laptop-code"></i>
-                                </div>
-                                <div class="floating-icon rocket">
-                                    <i class="fas fa-book"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="profile-glow"></div>
-                    </div>
-                </div>
-
-                <!-- Modal para foto expandida -->
-                <div class="photo-modal" id="photoModal">
-                    <div class="modal-backdrop" id="modalBackdrop"></div>
-                    <div class="modal-content">
-                        <div class="modal-photo-frame">
-                            <img src="assets/img/yo.JPG" alt="Sebastián Bravo" class="modal-photo-img" loading="lazy">
-                            <div class="modal-info">
-                                <h3>Sebastián Bravo Veloso</h3>
-                                <p>Estudiante de Ingeniería en Informática</p>
-                                <div class="modal-details">
-                                    <span><i class="fas fa-code"></i> Desarrollador Entusiasta</span>
-                                    <span><i class="fas fa-book"></i> Siempre Aprendiendo</span>
-                                    <span><i class="fas fa-code-fork"></i> Amante de la Informática</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="modal-close" id="modalClose">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+    <!-- 01 — whoami -->
+    <section id="about" class="entry" aria-labelledby="about-title">
+      <div class="wrap entry-grid">
+        <div class="spine" aria-hidden="true"><span class="spine-no">01</span></div>
+        <div class="entry-main about-grid">
+          <div class="entry-head">
+            <p class="cmd"><span class="hash">##</span> whoami</p>
+            <h2 id="about-title" data-i18n="about.title">Sobre mí</h2>
+          </div>
+          <div class="about-body">
+            <p class="lede" data-i18n="about.p1">Estudio Ingeniería en Informática en INACAP, Los Ángeles, y me interesa cómo el software resuelve problemas concretos: organizar, automatizar, proteger. Me muevo entre el frontend y el backend, y estoy dando mis primeros pasos en ciberseguridad.</p>
+            <p data-i18n="about.p2">Aprendo construyendo. Cada proyecto es una excusa para entender algo nuevo y dejarlo funcionando de verdad, no solo en la teoría.</p>
+            <ul class="hl" id="about-hl"></ul>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Mi Inspiración -->
-    <section id="inspiration" class="inspiration section">
-        <div class="container">
-            <h2 class="section-title">Mi Inspiración</h2>
-            <p class="section-subtitle">Mi inspiración para seguir a diario con lo que hago</p>
-            
-            <div class="inspiration-grid">
-                <!-- Mi Pareja -->
-                <div class="inspiration-card">
-                    <div class="inspiration-image">
-                        <img src="assets/img/Inspiracion/love.JPG" alt="Mi pareja" class="inspiration-img" loading="lazy">
-                        <div class="inspiration-overlay">
-                            <div class="inspiration-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inspiration-content">
-                        <h3>Mi Amada Lumière</h3>
-                        <p>Esta señorita es mi luz de cada dia, y además fue quien me inspiró a desarrollar mi primera aplicación.</p>
-                        <div class="inspiration-quote">
-                            <i class="fas fa-quote-left"></i>
-                            <span>"Juntos Por Siempre"</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mi Gata -->
-                <div class="inspiration-card">
-                    <div class="inspiration-image">
-                        <img src="assets/img/Inspiracion/gata.JPG" alt="Mi gata" class="inspiration-img" loading="lazy">
-                        <div class="inspiration-overlay">
-                            <div class="inspiration-icon">
-                                <i class="fas fa-paw"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inspiration-content">
-                        <h3>Mi Querida Yuumi</h3>
-                        <p>Mi gata gorda, lamentablemente el nombre viene del lol, y fue el único nombre que a mi madre le gusto. No sé que haría sin mi gata</p>
-                        <div class="inspiration-quote">
-                            <i class="fas fa-quote-left"></i>
-                            <span>"Mi Gata Watona"</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- 02 — changelog -->
+    <section id="work" class="entry" aria-labelledby="work-title">
+      <div class="wrap entry-grid">
+        <div class="spine" aria-hidden="true"><span class="spine-no">02</span></div>
+        <div class="entry-main">
+          <div class="entry-head">
+            <p class="cmd"><span class="hash">##</span> changelog</p>
+            <h2 id="work-title" data-i18n="projects.title">Proyectos</h2>
+          </div>
+          <div id="releases" class="releases"></div>
+          <p class="rel-note" id="work-note"></p>
         </div>
+      </div>
     </section>
 
-    <!-- Proyectos -->
-    <section id="projects" class="projects section">
-        <div class="container">
-            <h2 class="section-title">Mis Proyectos</h2>
-            <div class="projects-grid">
-                <!-- Proyecto 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/img/Proyectos/proyecto1.png" alt="Organizador Universitario de la Diatomea" class="project-img" loading="lazy">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                    <a href="https://www.diatomeauniversitaria.studio" class="project-link" title="Diatomea Universitaria" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                                    <a href="https://github.com/sebravo80/organizador-universitario" class="project-link" title="Código en GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Organizador Universitario de la Diatomea</h3>
-                        <p class="project-description">
-                            La idea de esta aplicación nació porque mi novia quería un excel para organizar sus cosas de la universidad,
-                            pero un excel es algo muy "rudimentario", por lo que decidí aprender a programar mejor y hacerle una aplicación web.
-                            Así que esto es por ella ❤️.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">CSS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/img/Proyectos/portfolio.png" alt="Portfolio personal" class="project-img" loading="lazy">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                    <a href="https://github.com/sebravo80" class="project-link" title="Repositorio en GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Portfolio Personal</h3>
-                        <p class="project-description">
-                            Bueno este sería mi portfolio, aquí quiero ir añadiendo los proyectos que desarrolle en un futuro.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- 03 — stack -->
+    <section id="stack" class="entry" aria-labelledby="stack-title">
+      <div class="wrap entry-grid">
+        <div class="spine" aria-hidden="true"><span class="spine-no">03</span></div>
+        <div class="entry-main">
+          <div class="entry-head">
+            <p class="cmd"><span class="hash">##</span> stack</p>
+            <h2 id="stack-title" data-i18n="stack.title">Con qué trabajo</h2>
+          </div>
+          <div id="stack-block" class="manifest"></div>
         </div>
+      </div>
     </section>
 
-    <!-- Experiencia -->
-    <section id="skills" class="skills section">
-        <div class="container">
-            <h2 class="section-title">Mi Experiencia</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js-square"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-server"></i>
-                            <span>Express</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Herramientas</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-terminal"></i>
-                            <span>Terminal</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>VS Code</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- 04 — notas de campo -->
+    <section id="personal" class="entry entry-dark" aria-labelledby="personal-title">
+      <div class="wrap entry-grid">
+        <div class="spine" aria-hidden="true"><span class="spine-no">04</span></div>
+        <div class="entry-main">
+          <div class="entry-head">
+            <p class="cmd"><span class="hash">##</span> personal</p>
+            <h2 id="personal-title" data-i18n="personal.title">Lo que me mueve</h2>
+            <p class="entry-sub" data-i18n="personal.sub">Las razones detrás de lo que hago.</p>
+          </div>
+          <div id="personal-list" class="field-notes"></div>
         </div>
+      </div>
     </section>
 
-    <!-- Contacto -->
-    <section id="contact" class="contact section" aria-labelledby="contact-title">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-intro">
-                    <h2 class="section-title" id="contact-title">Construyamos algo juntos</h2>
-                    <p class="section-subtitle">Si quieres colaborar, tienes una idea o simplemente deseas conversar, ¡escríbeme! Responderé tan pronto como pueda.</p>
-                    <div class="contact-details">
-                        <div class="contact-detail">
-                            <i class="fas fa-location-dot" aria-hidden="true"></i>
-                            <div>
-                                <span class="contact-label">Ubicación</span>
-                                <span>Los Ángeles, Chile (disponible remoto)</span>
-                            </div>
-                        </div>
-                        <div class="contact-detail">
-                            <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
-                            <div>
-                                <span class="contact-label">Correo</span>
-                                <a href="mailto:sebastian.25.bravoo@gmail.com">sebastian.25.bravoo@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-detail">
-                            <i class="fas fa-comments" aria-hidden="true"></i>
-                            <div>
-                                <span class="contact-label">Preferencias</span>
-                                <span>Frontend, automatización, primeros pasos en ciberseguridad</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" id="contactForm" novalidate>
-                    <div class="form-group">
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" name="name" placeholder="¿Cómo te llamas?" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correo electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="nombre@empresa.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="topic">Motivo</label>
-                        <select id="topic" name="topic" required>
-                            <option value="">Selecciona una opción</option>
-                            <option value="colaboracion">Colaboración o proyecto</option>
-                            <option value="mentoria">Mentoría o guía</option>
-                            <option value="pregunta">Preguntas generales</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Cuéntame sobre la idea o proyecto" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-                    <p class="form-feedback" role="status" aria-live="polite"></p>
-                </form>
-            </div>
+    <!-- 05 — contacto -->
+    <section id="contact" class="entry" aria-labelledby="contact-title">
+      <div class="wrap entry-grid">
+        <div class="spine" aria-hidden="true"><span class="spine-no">05</span></div>
+        <div class="entry-main contact-grid">
+          <div class="entry-head">
+            <p class="cmd"><span class="hash">##</span> contact</p>
+            <h2 id="contact-title" data-i18n="contact.title">Hablemos</h2>
+            <p class="entry-sub" data-i18n="contact.sub">¿Tienes una idea, una oportunidad o solo quieres conversar? Escríbeme.</p>
+          </div>
+          <ul class="contact-links" id="contact-links"></ul>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer  -->
-    <footer class="footer" id="footer">
-        <div class="container">
-            <div class="footer-content">
-                <!-- Mis redes sociales -->
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <div class="logo-icon">SB</div>
-                        <span class="logo-text">Sebastián Bravo</span>
-                    </div>
-                    <p class="footer-description">
-                        Estudiante de segundo año de Ingeniería en Informática.
-                    </p>
-                    <div class="footer-social">
-                        <a href="https://github.com/sebravo80" class="social-link" target="_blank" rel="noopener noreferrer" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:sebastian.25.bravoo@gmail.com" class="social-link" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://instagram.com/_seba_bravo_" class="social-link" target="_blank" rel="noopener noreferrer" title="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="foot-name">Sebastián Bravo Veloso</p>
+        <p class="foot-end" aria-hidden="true">FIN DEL REGISTRO</p>
+      </div>
+      <p class="foot-note">
+        <span class="foot-rights">© <span id="year"></span> Sebastián Bravo Veloso - <span data-i18n="ui.rights">Todos los derechos reservados.</span></span>
+      </p>
+    </div>
+  </footer>
 
-                <!-- Enlaces rápidos -->
-                <div class="footer-section">
-                    <h4>Navegación</h4>
-                    <div class="footer-links">
-                        <a href="#home" class="footer-link">Inicio</a>
-                        <a href="#about" class="footer-link">Sobre mí</a>
-                        <a href="#inspiration" class="footer-link">Mi Inspiración</a>
-                        <a href="#projects" class="footer-link">Proyectos</a>
-                        <a href="#skills" class="footer-link">Mi Experiencia</a>
-                        <a href="#contact" class="footer-link">Contacto</a>
-                    </div>
-                </div>
+  <noscript>
+    <p style="padding:1rem;text-align:center">Este sitio usa JavaScript para el contenido y el cambio de idioma. Escríbeme a <a href="mailto:sebastian.25.bravoo@gmail.com">sebastian.25.bravoo@gmail.com</a>.</p>
+  </noscript>
 
-                <!-- Información de contacto -->
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:sebastian.25.bravoo@gmail.com">sebastian.25.bravoo@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+56 9 56291545</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Los Ángeles, Chile</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Estudiante de Ingeniería en Informática, INACAP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tecnologías -->
-                <div class="footer-section">
-                    <h4>Tecnologías</h4>
-                    <div class="footer-tech-grid">
-                        <div class="tech-badge">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
-                        </div>
-                        <div class="tech-badge">
-                            <i class="fab fa-js-square"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="tech-badge">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="tech-badge">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="tech-badge">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="tech-badge">
-                            <i class="fas fa-database"></i>
-                            <span>MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 Sebastián Bravo Veloso. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="assets/js/script.js"></script>
+  <script src="content.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
