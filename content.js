@@ -51,7 +51,9 @@ window.CONTENT = {
       { label: { es: "Frontend", en: "Frontend" }, items: ["HTML", "CSS", "JavaScript", "React"] },
       { label: { es: "Backend", en: "Backend" }, items: ["Node.js", "Express", "Python", "MongoDB", "SQL"] },
       { label: { es: "Herramientas", en: "Tooling" }, items: ["Git", "GitHub", "Terminal", "VS Code"] }
-    ]
+    ],
+    note: { es: "La lista no está cerrada: sigo sumando lo que aprendo en cada proyecto.",
+            en: "The list isn't closed: I keep adding whatever I learn on each project." }
   },
 
   projects: {
@@ -99,17 +101,23 @@ window.CONTENT = {
         role: { es: "Mi novia", en: "My girlfriend" },
         desc: { es: "Y quien inspiró mi primera aplicación. La Diatomea existe por ella.",
                 en: "And the reason my first app exists. Diatomea was built for her." },
-        quote: "Juntos por siempre",
-        img: "assets/img/camila.webp",
-        imgW: 825, imgH: 1100,
-        alt: { es: "Fotografía de Camila", en: "Photograph of Camila" }
+        quote: { es: "Juntos por siempre", en: "Together forever" },
+        imgW: 675, imgH: 900,
+        imgs: [
+          { src: "assets/img/web/camila.webp",
+            alt: { es: "Fotografía de Camila", en: "Photograph of Camila" } },
+          { src: "assets/img/web/camila2.webp",
+            alt: { es: "Camila junto a una ventana", en: "Camila beside a window" } },
+          { src: "assets/img/web/camila3.webp",
+            alt: { es: "Camila riendo en un parque", en: "Camila laughing at a park" } }
+        ]
       },
       {
         name: "Yuumi",
         role: { es: "Mi gata", en: "My cat" },
         desc: { es: "El nombre viene del LoL — fue el único que le gustó a mi madre. No sé qué haría sin ella.",
                 en: "The name comes from League of Legends — the only one my mom liked. I don't know what I'd do without her." },
-        quote: "Mi gata watona",
+        quote: {es: "Mi gata watona", en: "My chubby cat" },
         img: "assets/img/yuumi.webp",
         imgW: 824, imgH: 1100,
         alt: { es: "Fotografía de Yuumi, la gata", en: "Photograph of Yuumi the cat" }
@@ -119,18 +127,49 @@ window.CONTENT = {
         role: { es: "Mi manera de mirar", en: "How I look at things" },
         desc: { es: "Ando siempre buscando qué escena, qué luz o qué detalle quedaría bien en una foto. Las que más me gustan terminan en mi Instagram.",
                 en: "I'm always looking for the scene, the light or the detail that would make a good photo. My favorites end up on my Instagram." },
-        quote: "Encuadrar antes de disparar",
-        icon: "aperture",
+        quote: { es: "Encuadrar antes de disparar", en: "Compose before shooting" },
         link: "https://instagram.com/_seba_bravo_",
-        linkLabel: { es: "Ver en Instagram", en: "See on Instagram" }
+        linkLabel: { es: "Ver en Instagram", en: "See on Instagram" },
+        /* Miniatura en la ficha, versión grande al ampliar */
+        imgW: 600, imgH: 800,
+        fullW: 1200, fullH: 1600,
+        imgs: [
+          { src: "assets/img/web/foto1.webp", full: "assets/img/web/foto1-lg.webp",
+            alt: { es: "Siesta de gato en el galpón", en: "Cat asleep in the shed" } },
+          { src: "assets/img/web/foto7.webp", full: "assets/img/web/foto7-lg.webp",
+            alt: { es: "Paradero rojo entre los árboles", en: "A red bus stop among the trees" } },
+          { src: "assets/img/web/foto5.webp", full: "assets/img/web/foto5-lg.webp",
+            alt: { es: "Atardecer entre torres de alta tensión", en: "Sunset between power towers" } },
+          { src: "assets/img/web/foto6.webp", full: "assets/img/web/foto6-lg.webp",
+            alt: { es: "Flor iluminada sobre el fondo oscuro", en: "A lit flower against the dark" } },
+          { src: "assets/img/web/foto4.webp", full: "assets/img/web/foto4-lg.webp",
+            alt: { es: "Escultura y luna creciente", en: "Sculpture and a crescent moon" } },
+          { src: "assets/img/web/foto2.webp", full: "assets/img/web/foto2-lg.webp",
+            alt: { es: "Un rincón del living a media luz", en: "A living-room corner in low light" } },
+          { src: "assets/img/web/foto3.webp", full: "assets/img/web/foto3-lg.webp",
+            alt: { es: "Gata recostada bajo luz rosada", en: "A cat lying in pink light" } }
+        ]
+      },
+      {
+        name: { es: "La música", en: "Music" },
+        role: { es: "Lo que hago sin pantalla", en: "What I do away from a screen" },
+        desc: { es: "Toco guitarra. Ahí entendí algo que después apliqué al código: lo difícil se vuelve fácil repitiéndolo, aunque al principio suene pésimo.",
+                en: "I play guitar. That's where I learned something I later applied to code: hard things get easy by repeating them, even if they sound awful at first." },
+        quote: { es: "Practicar es el atajo", en: "Practice is the shortcut" },
+        img: "assets/img/guitarra.webp",
+        imgW: 968, imgH: 1196,
+        alt: { es: "Mano sobre el diapasón de una guitarra", en: "A hand on a guitar fretboard" }
       },
       {
         name: { es: "Los videojuegos", en: "Video games" },
         role: { es: "Donde desconecto", en: "Where I switch off" },
-        desc: { es: "Juego desde siempre; de ahí salió el nombre de Yuumi. Es lo que hago cuando cierro el editor.",
-                en: "I've been playing forever — that's where Yuumi's name came from. It's what I do when I close the editor." },
-        quote: "Partida rápida",
-        icon: "controller"
+        desc: { es: "Juego desde siempre; de ahí salió el nombre de Yuumi. Además, de ahí viene una de mis frases favoritas.",
+                en: "I've been playing forever — that's where Yuumi's name came from. Besides, the videogames gave me my favourite phrase." },
+        quote: { es: "Dudar es Fracasar", en: "Hesitation is Defeat" },
+        img: "assets/img/sekiro.webp",
+        imgW: 1200, imgH: 1920,
+        alt: { es: "Arte de Sekiro: Shadows Die Twice, el juego del que viene la frase",
+               en: "Artwork from Sekiro: Shadows Die Twice, the game the quote comes from" }
       }
     ]
   },
@@ -145,6 +184,12 @@ window.CONTENT = {
     langLabel: { es: "EN", en: "ES" },
     flagship: { es: "Proyecto principal", en: "Flagship project" },
     scrollHint: { es: "Desplázate", en: "Scroll" },
-    rights: { es: "Todos los derechos reservados.", en: "All rights reserved." }
+    rights: { es: "Todos los derechos reservados.", en: "All rights reserved." },
+    close: { es: "Cerrar", en: "Close" },
+    prev: { es: "Anterior", en: "Previous" },
+    next: { es: "Siguiente", en: "Next" },
+    openPhoto: { es: "Ampliar: ", en: "Enlarge: " },
+    showPhoto: { es: "Ver foto ", en: "Show photo " },
+    viewer: { es: "Visor de fotografías", en: "Photo viewer" }
   }
 };
